@@ -1,1 +1,31 @@
-body { background: orange }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #bbb;
+}
+
+.powitanie {
+    height: 40vh;
+    margin: 100px;
+    text-align: center;
+    line-height: 10vh;
+    font-family: 'Bitter', serif;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px, -3px 3px 10px, 3px -3px 10px;
+}
+
+h1 {
+    padding-top: 70px;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+}
+
+p {
+    font-size: 20px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
