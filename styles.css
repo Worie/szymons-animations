@@ -1,32 +1,62 @@
-* {
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background: #f3f3f3;
 }
 
-body {
-    background-color: #bbb;
-}
-
-.powitanie,
-.quote {
-    height: 40vh;
-    margin: 100px;
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    line-height: 10vh;
-    font-family: 'Bitter', serif;
-    background-color: #fff;
-    box-shadow: 3px 3px 10px, -3px 3px 10px, 3px -3px 10px;
 }
 
-h1 {
-    padding-top: 70px;
-    letter-spacing: 2px;
-    word-spacing: 4px;
+.custom-checkbox {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background: #c6c6c6;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
 }
 
-p {
-    font-size: 20px;
-    letter-spacing: 1px;
-    word-spacing: 1px;
+.custom-checkbox::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    transition: .5s left ease-in-out;
+}
+
+.is-visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    IE6,
+    IE7 clip: rect(1px, 1px, 1px, 1px);
+}
+
+/*.custom-checkbox_inner:focus + .custom-checkbox {outline: 2px solid lightblue;}*/
+
+.custom-checkbox_inner:checked + .custom-checkbox {
+    background: #03a9f4;
+}
+
+/* apple green colour #8BCB71 is also good but I prefer blue*/
+
+.custom-checkbox_inner:checked + .custom-checkbox::before {
+    position: absolute;
+    left: 20px;
 }
