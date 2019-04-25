@@ -44,17 +44,17 @@ body {
     width: 1px;
     overflow: hidden;
     clip: rect(1px 1px 1px 1px);
-    IE6,
-    IE7 clip: rect(1px, 1px, 1px, 1px);
+    /* IE6 and IE7 support */
+    clip: rect(1px, 1px, 1px, 1px);
 }
 
-/*.custom-checkbox_inner:focus + .custom-checkbox {outline: 2px solid lightblue;}*/
+.custom-checkbox_inner:focus + .custom-checkbox {
+    outline: 2px solid lightblue;
+}
 
 .custom-checkbox_inner:checked + .custom-checkbox {
     background: #03a9f4;
 }
-
-/* apple green colour #8BCB71 is also good but I prefer blue*/
 
 .custom-checkbox_inner:checked + .custom-checkbox::before {
     position: absolute;
